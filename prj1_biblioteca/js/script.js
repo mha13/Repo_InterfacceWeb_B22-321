@@ -10,7 +10,9 @@ nuovoArray.forEach(nuovoItem => {
     document.writeln(`<p>${nuovoItem}</p>`);
 });
 //oltre metodo
-console.log(liberi.map((libero,index)=>{return libero+" - "+autori[index]}));
+let nuovoArray2 = liberi.map((libero,index)=>{return libero+" - "+autori[index]});
+nuovoArray2.sort();
+console.log(nuovoArray2);
 
 let mieiFacoriti = ["L'alchimista","Le quaranta porte"];
 document.writeln(`<h3>Il mio favoriti</h3>`);
