@@ -18,7 +18,7 @@ console.log(etaUSer, typeof etaUSer);
 
 
 
-let presentazione = "Ciao, mi chiamo \n" + nomeUser + " " + cognomeUser + " e ho " + etaUSer + " anni, sono nata nel " + annoNascita + "\nEmail: " + emailUser;
+let presentazione = "Ciao, tutti mi chiamo \n" + nomeUser + " " + cognomeUser + " e ho " + etaUSer + " anni, sono nata nel " + annoNascita + "\nEmail: " + emailUser;
 
 console.log(presentazione);
 
