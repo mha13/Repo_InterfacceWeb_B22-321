@@ -41,7 +41,6 @@ if (risultato > 20 && risultato < 30) {
 /* ------------------------------- Esercizio 4 ------------------------------ */
 
 let score = 99;
-
 score++;
 
 if (score % 10 === 0 && !false) {
