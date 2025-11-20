@@ -20,4 +20,3 @@ mieiFacoriti.sort();
 mieiFacoriti.forEach(mioFacorito => {
     document.writeln(`<p>${mioFacorito}</p>`);
 });
-
