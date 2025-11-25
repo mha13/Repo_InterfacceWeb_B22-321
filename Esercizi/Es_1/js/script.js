@@ -48,3 +48,4 @@ if (score % 10 === 0 && !false) {
 } else {
     console.log("Score attuale: " + score);
 }
+
