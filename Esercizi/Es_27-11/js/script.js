@@ -1,5 +1,8 @@
 //ES1 Scrivi, utilizzando if-statement, un programma per trovare il numero più grande tra 5 numeri. Mostra il risultato in un alert.
-let numeri = [2, 4, 15, 1, 5]
+let numeri=[]
+do{
+numeri.push(prompt("insersci nuovo vumero"));
+}while(numeri.length<5)
 let numeroGrande = numeri[0];
 for (let i = 0; i < numeri.length; i++) {
     if (numeri[i] > numeroGrande) {
