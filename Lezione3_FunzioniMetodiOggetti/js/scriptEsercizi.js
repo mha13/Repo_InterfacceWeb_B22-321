@@ -65,7 +65,8 @@ const es5 = () => {
     let elemento = document.getElementById("ruotalaStringa");
     let testo = elemento.innerText;
     setInterval(() => {
-        testo = testo.charAt(testo.length - 1) + testo.slice(0, testo.length - 1);
+        testo = testo.charAt(testo.length - 1) + testo.slice(0, testo.length - 1); // da sinistra verso destra
+        // testo = testo.slice(1, testo.length ) + testo.charAt(0) ; // da destra verso sinistra
         elemento.innerText = testo;
     }, 500);
 }
