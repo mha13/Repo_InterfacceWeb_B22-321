@@ -1,7 +1,3 @@
-/**
- * @param {string} stringa
- * @param {string} lettera
- */
 
 /* ---------------------------------- ES 1 ---------------------------------- */
 //Dichiara una funzione con all'interno una variabile e stampa il suo valore.
@@ -22,7 +18,11 @@ secondo();
 
 /* ----------------------------------- ES2 ---------------------------------- */
 //Scrivi una funzione javascript che accetta due argomenti: una stringa e una lettera. La funzione conterà il numero di occorrenze della specifica lettera nella stringa
-
+/**
+ * 
+ * @param {Srting} stringa 
+ * @param {Srting} lettera 
+ */
 const es2 = (stringa, lettera) => {
     let count = 0;
     for (let i = 0; i < stringa.length; i++) {
@@ -44,6 +44,7 @@ const es3 = (argomento) => {
 console.log(es3(42));
 console.log(es3("Ciao"));
 console.log(es3({}));
+console.log(es3(es2));
 
 /* ----------------------------------- ES4 ---------------------------------- */
 //Scrivi una funzione javascript che accetta una stringa come parametro e trova la parola più lunga all’interno della frase. Es (mi chiamo Massimiliano -> Massimiliano).
@@ -98,7 +99,7 @@ const es7 = (array) => {
     });
     console.log(nonDuplicatiArray);
 }
-let arrayDiNome2 = ['Dario', 'Milo', 'Oscar', 'Davide','Dario', 'Milo', 'Oscar', 'Davide'];
+let arrayDiNome2 = ['Dario', 'Milo', 'Oscar', 'Davide','Dario', 'Milo', 'Oscar', 'Davide','Hossein'];
 es7(arrayDiNome2);
 
 /* ----------------------------------- ES8 ---------------------------------- */
