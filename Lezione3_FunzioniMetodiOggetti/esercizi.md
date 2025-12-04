@@ -33,4 +33,26 @@ Output = [1,4,7,12,13]
 ### Es9
 Dati due numeri: num1 = 5; num2 = 9; stampa in console il risultato delle 4 operazioni matematiche di base quando premo un pulsante "Calcola" nella pagina html. Ogni operazione avrà una sua funzione dedicata.
 
+### Es 10
+Crea i seguenti campi input in html: 
+- nome
+- cognome
+- data di Nascita
+- età
+- corso frequentato
 
+Con un pulsante mostra info recupera tutte le informazioni dai campi e stampale sotto in un div come se volessi presentare l'utente che ha appena compilato i campi.
+Attenzione: crea una funzione che accetta in ingresso tanti parametri per quanti sono i campi input creati
+
+### Es 11
+Scrivi una funzione calcolaAreaRettangolo(base, altezza) che restituisce l'area di un rettangolo o il perimetro in base al pulsante cliccato.
+
+### Es 12
+Scrivere un programma per trovare il valor più vicino a 100 tra una coppia di numeri forniti, se sono uguali ritorna un avviso.
+
+### Es 13
+Scrivi un programma che accetta una frase come parametro e imposta in upper-case l’iniziale di ogni singola parola
+Es: oggi andrò a lezione ---> Oggi Andrò A Lezione
+
+### Es 14
+Scrivi un programma che controlla se un dato intero si trova tra 20 e 100 o tra 20 e 400
