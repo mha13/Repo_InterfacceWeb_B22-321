@@ -150,7 +150,7 @@ es9(num1, num2, 'calcola');
 // Con un pulsante mostra info recupera tutte le informazioni dai campi e stampale sotto in un div come se volessi presentare l'utente che ha appena compilato i campi.
 // Attenzione: crea una funzione che accetta in ingresso tanti parametri per quanti sono i campi input creati
 
-const mostraInfo = (idDiBottone, ...idsDiInput) => {
+const es10 = (idDiBottone, ...idsDiInput) => {
     let bottone = document.getElementById(idDiBottone);
     bottone.addEventListener('click', () => {
         let risultatoDiv = document.getElementById("risultato");
@@ -163,12 +163,12 @@ const mostraInfo = (idDiBottone, ...idsDiInput) => {
     });
 }
 
-mostraInfo('mostraInfo', 'nome', 'cognome', 'dataDiNascita', 'eta', 'corsoFrequentato');
+es10('mostraInfo', 'nome', 'cognome', 'dataDiNascita', 'eta', 'corsoFrequentato');
 
 /* ----------------------------------- ES11 ---------------------------------- */
 // Scrivi una funzione calcolaAreaRettangolo(base, altezza) che restituisce l'area di un rettangolo o il perimetro in base al pulsante cliccato.
 
-const calcolaAreaRettangolo = (base, altezza, tipoCalcolo) => {
+const es11 = (base, altezza, tipoCalcolo) => {
     if (tipoCalcolo === 'area') {
         return base * altezza;
     } else if (tipoCalcolo === 'perimetro') {
@@ -178,12 +178,12 @@ const calcolaAreaRettangolo = (base, altezza, tipoCalcolo) => {
     }
 }
 
-console.log(calcolaAreaRettangolo(5, 10, 'area'));
+console.log(es11(5, 10, 'area'));
 
 /* -------------------------------- ### Es 12 ------------------------------- */
 // Scrivere un programma per trovare il valor più vicino a 100 tra una coppia di numeri forniti, se sono uguali ritorna un avviso.
 
-const valorPiuVicinoA100 = (num1, num2) => {
+const es12 = (num1, num2) => {
     if (num1 === num2) {
         return "I numeri sono uguali!";
     }
@@ -197,34 +197,34 @@ const valorPiuVicinoA100 = (num1, num2) => {
     }
     return risulto
 }
-console.log(valorPiuVicinoA100(95, 90));
+console.log(es12(95, 90));
 
 /* -------------------------------- ### Es 13 ------------------------------- */
 // Scrivi un programma che accetta una frase come parametro e imposta in upper-case l’iniziale di ogni singola parola
 // Es: oggi andrò a lezione ---> Oggi Andrò A Lezione
- 
+
 /**
  * 
  * @param {String} parola 
  * 
  */
-const inizialeMaiuscola = (frase) => {
+const es13 = (frase) => {
     parole = frase.split(" ");
-    let NuoviForma=[];
+    let NuoviForma = [];
     parole.forEach(parola => {
-       NuoviForma.push(parola.charAt(0).toUpperCase()+parola.slice(1,parola.length));
+        NuoviForma.push(parola.charAt(0).toUpperCase() + parola.slice(1, parola.length));
     });
     return NuoviForma.join(" ")
 }
-console.log(inizialeMaiuscola("oggi andrò a lezione"));
+console.log(es13("oggi andrò a lezione"));
 
 /* -------------------------------- ### Es 14 ------------------------------- */
 // Scrivi un programma che controlla se un dato intero si trova tra 20 e 100 o tra 20 e 400
-const controlloIntero = (num) => {
+const es14 = (num) => {
     if ((num >= 20 && num <= 100) || (num >= 20 && num <= 400)) {
-        return true;
+        return num + " è intero tra 20 e 100 o tra 20 e 400";
     } else {
-        return false;
+        return num + " non è intero tra 20 e 100 o tra 20 e 400";
     }
 }
-console.log("intero si trova tra 20 e 100 o tra 20 e 400 : " + controlloIntero(50));
+console.log(es14(650));
