@@ -4,17 +4,13 @@ let auto = {
     eta: 0,
     corso: "",
 
-    iscrivereStudente(nome, cognome, eta, corso) {
+    iscrivereStudente(nome, cognome) {
         this.nome = nome;
         this.cognome = cognome;
-        this.eta = eta;
-        this.corso = corso;
         return "Studente: " + this.nome + " " + this.cognome;
     },
 
-    informazioniDiStudente(nome, cognome, eta, corso) {
-        this.nome = nome;
-        this.cognome = cognome;
+    informazioniDiStudente(eta, corso) {
         this.eta = eta;
         this.corso = corso;
         return "Informazione di studente: " + this.eta + " " + this.corso;
@@ -36,8 +32,8 @@ function agguingreStudente(){
         return;
     }
 
-    demo.innerHTML = "<p>" + auto.iscrivereStudente(nome, cognome, eta, corso) + "</p>";
-    demo.innerHTML += "<p>" + auto.informazioniDiStudente(nome, cognome, eta, corso) + "</p>";  
+    demo.innerHTML = "<p>" + auto.iscrivereStudente(nome, cognome) + "</p>";
+    demo.innerHTML += "<p>" + auto.informazioniDiStudente(eta, corso) + "</p>";  
     document.getElementById("nome").value = "";
     document.getElementById("cognome").value = "";
     document.getElementById("eta").value = "";
