@@ -31,6 +31,9 @@ function agguingreStudente(){
     if(nome === "" || cognome === "" || eta === "" || corso === ""){
         demo.innerHTML = "<p>Compila tutti i campi!</p>";
         return;
+    }else if(isNaN(eta) || eta <= 0){
+        demo.innerHTML = "<p>Inserisci un'età valida!</p>";
+        return;
     }
 
     demo.innerHTML = "<p>" + auto.iscrivereStudente(nome, cognome, eta, corso) + "</p>";
