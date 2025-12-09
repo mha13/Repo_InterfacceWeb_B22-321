@@ -228,3 +228,4 @@ const es14 = (num) => {
     }
 }
 console.log(es14(650));
+
