@@ -35,6 +35,10 @@ function agguingreStudente(){
 
     demo.innerHTML = "<p>" + auto.iscrivereStudente(nome, cognome, eta, corso) + "</p>";
     demo.innerHTML += "<p>" + auto.informazioniDiStudente(nome, cognome, eta, corso) + "</p>";  
+    document.getElementById("nome").value = "";
+    document.getElementById("cognome").value = "";
+    document.getElementById("eta").value = "";
+    document.getElementById("corso").value = "";
 }
 
 let btn = document.getElementById("btn");
