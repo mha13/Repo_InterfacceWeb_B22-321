@@ -1,66 +1,44 @@
 let auto = {
-    marca: "",
-    modello: "",
-    cilindrata: 0,
-    marcia: 0,
-    velocita: 0,
-    numGiri: 0,
-    accesa: false,
+    neme: "",
+    cognome: "",
+    eta: 0,
+    corso: "",
 
-
-    presentaAuto(marca, modello){
-        this.marca = marca;
-        this.modello = modello;
-
-        return "Auto: " + this.marca + " " + this.modello;
+    iscrivereStudente(nome, cognome) {
+        this.nome = nome;
+        this.cognome = cognome;
+        return "Studente: " + this.nome + " " + this.cognome;
     },
 
-    accendiAuto(){
-        if(this.accesa){
-            this.accesa = false;
-           return "Hai spento l'auto"; 
-        }else{
-            this.accesa = true;
-            return "Hai acceso l'auto";
-        }
-    },
-
-    cambiaMarcia(marcia){
-        this.marcia = marcia;
-        return "Sei alla marcia: " + this.marcia;
-    },
-
-    calcolaVelocita(numGiri){
-        this.numGiri = numGiri;
-        this.velocita = (this.marcia * 100) / this.numGiri;
-        return "La tua vel attuale è : " +  this.velocita;
+    informazioniDiStudente(eta, corso) {
+        this.eta = eta;
+        this.corso = corso;
+        return "Informazione di studente: " + this.eta + " " + this.corso;
     }
 }
 
-// console.log(auto.presentaAuto("Fiat", "Panda"));
-// console.log(auto.accendiAuto());
-// auto.cambiaMarcia(3);
-// console.log(auto.calcolaVelocita(2000));
-
-function usaAuto(){
-    let marca = document.getElementById("marca").value;
-    let modello = document.getElementById("modello").value;
-    let cilindrata = document.getElementById("cilindrata").value;
-    let numGiri = document.getElementById("numGiri").value;
-    let marcia = document.getElementById("marcia").value;
+function agguingreStudente(){
+    let nome = document.getElementById("nome").value;
+    let cognome = document.getElementById("cognome").value;
+    let eta = document.getElementById("eta").value;
+    let corso = document.getElementById("corso").value;
 
     let demo = document.getElementById("demo");
-
-    demo.innerHTML = "<p>" + auto.accendiAuto() + "</p>";
-
-    if(auto.accesa){
-        demo.innerHTML += "<p>" + auto.presentaAuto(marca, modello) + "</p>";
-        demo.innerHTML += "<p>" + auto.cambiaMarcia(marcia) + "</p>";
-        demo.innerHTML += "<p>" + auto.calcolaVelocita(numGiri) + "</p>";
-    }else{
-        demo.innerHTML += "<p> Con l'auto spenta non posso calcolare nulla </p>"
+    if(nome === "" || cognome === "" || eta === "" || corso === ""){
+        demo.innerHTML = "<p>Compila tutti i campi!</p>";
+        return;
+    }else if(isNaN(eta) || eta <= 0){
+        demo.innerHTML = "<p>Inserisci un'età valida!</p>";
+        return;
     }
+
+    demo.innerHTML = "<p>" + auto.iscrivereStudente(nome, cognome) + "</p>";
+    demo.innerHTML += "<p>" + auto.informazioniDiStudente(eta, corso) + "</p>";  
+    document.getElementById("nome").value = "";
+    document.getElementById("cognome").value = "";
+    document.getElementById("eta").value = "";
+    document.getElementById("corso").value = "";
 }
 
 let btn = document.getElementById("btn");
-btn.addEventListener("click", usaAuto);
+btn.addEventListener("click", agguingreStudente);

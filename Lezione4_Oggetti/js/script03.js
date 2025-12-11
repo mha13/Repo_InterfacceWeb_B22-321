@@ -1,44 +1,62 @@
-let auto = {
-    neme: "",
-    cognome: "",
-    eta: 0,
-    corso: "",
+//NOTAZIONE CON FUNZIONE COSTRUTTORE, ATT: la funzione comincia con una lettera in Uppercase, MAIUS
+function Studente(nome, cognome, matricola, corso) {
+  this.nome = nome;
+  this.cognome = cognome;
+  this.matricola = matricola;
+  this.corso = corso;
 
-    iscrivereStudente(nome, cognome) {
-        this.nome = nome;
-        this.cognome = cognome;
-        return "Studente: " + this.nome + " " + this.cognome;
-    },
-
-    informazioniDiStudente(eta, corso) {
-        this.eta = eta;
-        this.corso = corso;
-        return "Informazione di studente: " + this.eta + " " + this.corso;
-    }
+  this.presentati = function () {
+    return `Ciao, mi chiamo ${this.nome} ${this.cognome}, matricola ${this.matricola}. Sono iscritto al corso di ${this.corso}`;
+  };
 }
 
-function agguingreStudente(){
-    let nome = document.getElementById("nome").value;
-    let cognome = document.getElementById("cognome").value;
-    let eta = document.getElementById("eta").value;
-    let corso = document.getElementById("corso").value;
+let studente1 = new Studente("Anna", "Rossi", 123, "Frontend");
+let studente2 = new Studente("Mario", "Verdi", 234, "Backend");
+let studente3 = new Studente("Laura", "Gialli", 345, "Db Management");
 
-    let demo = document.getElementById("demo");
-    if(nome === "" || cognome === "" || eta === "" || corso === ""){
-        demo.innerHTML = "<p>Compila tutti i campi!</p>";
-        return;
-    }else if(isNaN(eta) || eta <= 0){
-        demo.innerHTML = "<p>Inserisci un'età valida!</p>";
-        return;
+console.log(studente1.presentati());
+console.log(studente2.presentati());
+console.log(studente3.presentati());
+
+//------CLASS------
+//A partire da ES2015 sono state introdotte le classi.
+class Docente {
+  constructor(nome, cognome, corsoAssegnato) {
+    //Le proprietà definiscono lo STATO della classe
+    this.nome = nome;
+    this.cognome = cognome;
+    this.corsoAssegnato = corsoAssegnato;
+  }
+
+  // I metodi definiscono il comportamento
+  insegna() {
+    let info = `Docente: ${this.nome} ${this.cognome}`;
+    if (
+      this.corsoAssegnato != undefined &&
+      this.corsoAssegnato != "" &&
+      this.corsoAssegnato
+    ) {
+      info += `. Corso Assegnato: ${this.corsoAssegnato}`;
+    } else {
+      info += ". Nessun corso assengnato";
     }
-
-    demo.innerHTML = "<p>" + auto.iscrivereStudente(nome, cognome) + "</p>";
-    demo.innerHTML += "<p>" + auto.informazioniDiStudente(eta, corso) + "</p>";  
-    document.getElementById("nome").value = "";
-    document.getElementById("cognome").value = "";
-    document.getElementById("eta").value = "";
-    document.getElementById("corso").value = "";
+    return info;
+  }
 }
 
-let btn = document.getElementById("btn");
-btn.addEventListener("click", agguingreStudente);
+//Questi oggetti sono ISTANZE DELLA CLASSE DOCENTE
+let docente1 = new Docente("Dario", "Mennillo", "Web");
+let docente2 = new Docente("Oscar", "Vecchione", "Frontend");
+
+console.log(docente1.insegna());
+console.log(docente2.insegna());
+
+let corpoDocenti = [
+  new Docente("Pippo", "Verdi", "Java"),
+  new Docente("Marco", "Neri"),
+  new Docente("Luca", "Gialli", "Backend"),
+];
+
+corpoDocenti.forEach((doc) => {
+  console.log(doc.insegna());
+});
