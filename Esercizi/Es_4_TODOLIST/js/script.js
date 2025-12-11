@@ -63,5 +63,6 @@ document.getElementById('todo-collection').addEventListener('change', (event) =>
         todoList.todo[index].completato = event.target.checked;
         document.getElementById(`container-${index}`).style.textDecoration = event.target.checked ? 'line-through' : 'none';
         console.log(todoList.todo[index].toString());
+        console.log('-------------------');   
     }
 });
